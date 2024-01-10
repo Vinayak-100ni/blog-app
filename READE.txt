@@ -1,0 +1,87 @@
+npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+
+login in appwrite and create a .env file for vite/react/vue...
+
+../vite --> import.meta.env.VITE_
+
+VITE_APPWRITE_URL ="test-environment"
+VITE_APPWRITE_PRODUCT_ID =""
+VITE_APPWRITE_DATABASE_ID =""
+VITE_APPWRITE_COLLECTION_ID =""
+VITE_APPWRITE_BUCKET_ID =""
+
+create a conf file in src
+
+then create a object of envs in conf file which will be stored in a function
+
+then create a auth.js file in appwrite folder
+
+""" create a authservce class and function in it which helps in passing the full data in appwrite backend ""
+
+then create a config file in appwrite folder
+""" create a service class and function in which contains all CRUD methods for posts
+    """ 
+
+after that we will connect our app with redux toolkit ....
+
+"" create an store folder for creating a store file  
+ create authSlice and then create a login function in app file 
+
+ create footer component
+ then create header component 
+
+ in header component firstly create a logoutBtn using authservice and logout function(authSlice)
+
+ after that we create our header component with the help of useNavigate
+
+ then create a comman btn in component folder  
+ '''''create comman input tag with the help of ---React.forwardRef---"""""""""""(which helps in comunication btw input tag and its state )
+  ................................................ ex...............................
+
+ import React, { userId } from 'react'
+
+const InputTag = React.forwardRef(function InputTag({parameters}, ref) {
+ return <h1>Test</h1>
+})
+
+
+export default InputTag;
+-------------------------------------  or  -------------------------
+
+const InputTag =()=>{
+return ();}
+
+export default React.forwardRef(InputTag);
+
+...................................................................................
+
+
+after creating input tag create an select tag  with the help of forwardRef(function) 
+
+
+...........create a postCard component...
+
+......create login component using useForm ...(How to use React hook form in production {chai aur code})
+
+create an login method and pass it to handleSubmit event  
+
+same as login create signin component
+
+know its time to create Authentication layout for protecting the app component(protection Mechanism)
+
+Create a Real Time Editor (RTE) component with the help of  """""""@tinymce/tinymce-react"""""""""
+
+we use Controller from react-hook-form to manage the state of RTE components..
+
+now we create PostForm component with the help of RTE. 
+
+-------> firstly we create a submit method after that we will create slugTransform function with the help of "" useCallback and useEffect hooks ""
+
+// subscription will be created with the help of watch method and it will be unsubscribed with the help of callback return for memory management and it is optimized technique too.
+==================   useEffect(() => {
+==================     const subscription = watch()
+==================   
+==================     return () => { subscription = unsubscribe() }
+==================    }, [watch, slugTransform, setValue])
+
+
