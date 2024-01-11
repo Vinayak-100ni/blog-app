@@ -35,31 +35,34 @@ const Header = () => {
   },
  ]
  return (
-  <header className='py-3 shadow bg-gray-500 w-full space-between '>
-   <Container>
-    <nav className='mr-4'><div className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
-     <Link to="/" >BLOG</Link></div>
-     <ul className='flex flex-wrap ml-auto'>
-      {
-       navItems.map((items) =>
-        items.active ? (
-         <li key={items.name}>
-          <button onClick={() => navigate(items.slug)} className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 roundede-full'>{items.name}</button>
-         </li>
-        ) : null
-       )
-      }
-      {
-       authStatus && (
-        <li>
-         <LogoutBtn />
-        </li>
-       )
-      }
-     </ul>
+<header className='py-3 shadow bg-gray-500 w-full flex items-center justify-between'>
+  <Container>
+    <nav className='flex items-center'>
+      <div className='text-2xl font-semibold whitespace-nowrap dark:text-white'>
+        <Link to="/" >BLOG</Link>
+      </div>
+      <ul className='flex flex-wrap ml-auto space-x-4'>
+        {navItems.map((item) => 
+          item.active && (
+            <li key={item.name}>
+              <button
+                onClick={() => navigate(item.slug)}
+                className='px-4 py-2 duration-200 hover:bg-blue-100 rounded-full'
+              >
+                {item.name}
+              </button>
+            </li>
+          )
+        )}
+        {authStatus && (
+          <li>
+            <LogoutBtn />
+          </li>
+        )}
+      </ul>
     </nav>
-   </Container>
-  </header>
+  </Container>
+</header>
  )
 }
 
