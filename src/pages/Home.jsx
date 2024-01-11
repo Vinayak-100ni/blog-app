@@ -26,7 +26,7 @@ const Home = () => {
     </div>
    </Container>
   </div>
- ) : (<Container><div>No post Found</div></Container>)
+ ) : (<Container><div>Please Login... </div></Container>)
 }
 
 export default Home
