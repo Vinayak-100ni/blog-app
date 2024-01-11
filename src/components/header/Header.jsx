@@ -35,7 +35,7 @@ const Header = () => {
   },
  ]
  return (
-  <header className='py-3 shadow bg-gray-500 '>
+  <header className='py-3 shadow bg-gray-500 w-full space-between '>
    <Container>
     <nav className='mr-4'><div className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
      <Link to="/" >BLOG</Link></div>
