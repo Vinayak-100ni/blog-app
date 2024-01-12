@@ -26,7 +26,7 @@ const Home = () => {
     </div>
    </Container>
   </div>
- ) : (<Container><marquee className="flex text-xl">No post Found</marquee></Container>)
+ ) : (<Container><marquee className="flex text-xl h-screen">No post Found</marquee></Container>)
 }
 
 export default Home
